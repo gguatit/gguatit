@@ -43,16 +43,6 @@
 
 ---
 
-## 📈 Stats Summary
-- Total Contributions: **695**
-- Contributions (2026): **275**
-- Current Streak: **2 days**
-- Longest Streak: **8 days**
-- Public Repositories: **21**
-- Top Languages: JavaScript / Python / HTML / Shell / CSS
-
----
-
 ## 🔐 Security Research
 - Web 취약점 분석 (XSS, SQL Injection, 인증 우회)
 - API 보안 테스트 및 공격 벡터 분석
