@@ -6,7 +6,7 @@ Web/API security and backend engineer. I design OpenAPI-based APIs, analyze atta
 
 <p align="center">
   <img src="https://img.shields.io/github/followers/gguatit?style=social" alt="GitHub followers" />
-  <img src="https://komarev.com/ghpvc/?username=gguatit&color=blue" alt="Profile visitors" />
+  <img src="https://hits.sh/github.com/gguatit.svg?label=Profile%20visitors&color=0e75b6" alt="Profile visitors" />
   <a href="https://hub.xerj.org/contributors/gguatit"><img src="https://hub.xerj.org/contributors/gguatit/badge.svg" alt="XERJ Corpus Hub contributor" /></a>
 </p>
 
