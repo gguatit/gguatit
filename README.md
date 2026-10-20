@@ -1,8 +1,13 @@
 # gguatit
 
+**kalpha** · Web & API Security / Backend
+
+Web/API security and backend engineer. I design OpenAPI-based APIs, analyze attack scenarios, and validate them with reproducible PoCs.
+
 <p align="center">
-  <img src="https://img.shields.io/github/followers/gguatit?style=social" />
-  <img src="https://komarev.com/ghpvc/?username=gguatit&color=blue" />
+  <img src="https://img.shields.io/github/followers/gguatit?style=social" alt="GitHub followers" />
+  <img src="https://komarev.com/ghpvc/?username=gguatit&color=blue" alt="Profile visitors" />
+  <a href="https://hub.xerj.org/contributors/gguatit"><img src="https://hub.xerj.org/contributors/gguatit/badge.svg" alt="XERJ Corpus Hub contributor" /></a>
 </p>
 
 ---
@@ -32,7 +37,8 @@ OpenAPI 기반 API 설계 및 공격 시나리오 분석
 Node.js (Express)<br/>
 TypeScript<br/>
 OpenAPI 3.x (Swagger)<br/>
-RESTful API Design
+RESTful API Design<br/>
+WebSocket
 </td>
 </tr>
 
@@ -53,11 +59,20 @@ Wireshark (Traffic Analysis)
 </tr>
 
 <tr>
+<td><b>Cloud</b></td>
+<td>
+Cloudflare Workers<br/>
+Cloudflare D1<br/>
+Cloudflare R2<br/>
+Durable Objects
+</td>
+</tr>
+
+<tr>
 <td><b>Infra</b></td>
 <td>
 Docker<br/>
-Git<br/>
-Cloudflare
+Git
 </td>
 </tr>
 </table>
@@ -67,35 +82,50 @@ Cloudflare
 ## Activity
 
 <p align="center">
-  <img src="https://streak-stats.demolab.com?user=gguatit&theme=radical" width="48%" />
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=gguatit&theme=radical" width="48%" />
+  <img src="https://streak-stats.demolab.com?user=gguatit&theme=radical" width="48%" alt="GitHub streak stats" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=gguatit&theme=radical" width="48%" alt="Top languages by repository" />
 </p>
 
 <p align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=gguatit&theme=radical" width="96%" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=gguatit&theme=radical" width="96%" alt="GitHub profile details" />
 </p>
 
 ---
 
-## Security Research
+## Security Practice
+
+직접 수행한 테스트와 관심 있는 연구 주제를 정리합니다.
 
 ### Web Layer
-- XSS (Reflected / Stored) 공격 및 필터 우회 검증
-- SQL Injection (Error / Boolean 기반) 테스트
+- XSS, SQL Injection 등 웹 취약점 재현 및 필터 우회 검증
 - 인증 우회 및 세션 처리 로직 분석
 
 ### API Layer
-- OpenAPI 기반 API 구조 분석
-- 입력값 검증 우회 (JSON / Query / Header)
+- OpenAPI 명세 기반 API 구조 및 입력 검증 분석
 - JWT 구조 분석 및 변조 테스트
 
 ### Network Layer
-- 패킷 캡처 및 트래픽 분석
-- HTTP/HTTPS 세션 흐름 분석
+- 패킷 캡처 및 HTTP/HTTPS 트래픽 흐름 분석
 
 ---
 
-## Threat Model
+## Projects
+
+### Anonymous Chat
+[github.com/gguatit/Anonymous_Chat](https://github.com/gguatit/Anonymous_Chat)
+
+**Stack**: JavaScript · Cloudflare Workers · Durable Objects · D1
+
+**Overview**
+- Real-time anonymous chat service
+- Minimal user identification architecture
+
+**Security**
+- Input validation / output encoding
+- XSS and injection defense design
+- Client-rendering attack vector validation
+
+**Threat Model**
 
 <table>
 <tr><td width="20%"><b>Attacker</b></td><td>Unauthenticated External User</td></tr>
@@ -103,38 +133,59 @@ Cloudflare
 <tr><td><b>Vectors</b></td><td>XSS / Injection / Request Manipulation</td></tr>
 </table>
 
----
-
-## Projects
-
-### Anonymous Chat
-https://github.com/gguatit/Anonymous_Chat
-
-**Overview**
-- Real-time Anonymous Chat Service
-- Minimal User Identification Architecture
-
-**Security**
-- Input Validation / Output Encoding 적용
-- XSS 및 Injection 방어 구조 설계
-- 클라이언트 렌더링 기반 공격 벡터 검증
+**XERJ Corpus Hub**
+- Selected commit: [`e57e898a51`](https://github.com/gguatit/Anonymous_Chat/commit/e57e898a51) — 공지사항을 D1에 영구 저장, Durable Object 저장 한도로 인한 공지 유실 수정
+- [Contributor profile](https://hub.xerj.org/contributors/gguatit) · AGPL-3.0 corpus, currently in licence review (not yet installable)
 
 ---
 
-### kalpha-s_api
-https://github.com/gguatit/kalpha-s_api
+### XMem
+[Xeon-Security/XMem](https://github.com/Xeon-Security/XMem)
+
+**Stack**: Rust · egui · Windows user-mode
 
 **Overview**
-- TypeScript 기반 API 서버
-- OpenAPI 3.x 명세 기반 구조 설계
+- Windows 프로세스 메모리 공격·포렌식 연구 플랫폼
+- 프로세스/메모리 맵/PE/모듈/스레드 분석, 스냅샷 diff, 미니덤프, `.xmemimg` 생성·분석
 
 **Security**
-- 요청 스키마 검증 기반 입력 제한
-- API Request 변조 테스트 수행
-- 인증/인가 구조 확장 고려 설계
+- XMEM-001~005 증거 기반 탐지 및 위험도 점수
+- 통제된 실험과 리포트 자동화
+
+---
+
+### file-server
+[gguatit/file-server](https://github.com/gguatit/file-server) · [file.kalpha.kr](https://file.kalpha.kr)
+
+**Stack**: TypeScript · Hono · Cloudflare Workers · R2
+
+**Overview**
+- Cloudflare Workers + R2 기반 파일 서버
+- API 업로드/다운로드, 24시간 후 자동 삭제
+
+**Security**
+- API key / admin 인증 (12h JWT, PBKDF2-SHA256, HMAC-signed httpOnly cookie)
+- IP rate limit (60/min), 업로드 크기 제한 (50MB / chunked 250MB)
+- UUID v4 파일 ID, attachment + nosniff, CORS allowlist, 만료 검사
+
+---
+
+### OCS (OpenCode Sessions)
+[gguatit/OCS-OpenCode-Sessions-](https://github.com/gguatit/OCS-OpenCode-Sessions-)
+
+**Stack**: Tauri 2 · Rust · rusqlite · Vanilla JS
+
+**Overview**
+- opencode 세션 SQLite DB를 읽기 전용으로 탐색하는 데스크톱 앱
+- 대화 뷰, todos, diffs, command palette, bookmarks, en/ko/zh/ja i18n
+
+**Security**
+- rusqlite query-only 모드로 DB에 read-only 접근
+- `~/.local/share/opencode/opencode.db`만 조회
 
 ---
 
 ## Contact
 
-dev@kalpha.kr
+- GitHub: [github.com/gguatit](https://github.com/gguatit)
+- Email: [dev@kalpha.kr](mailto:dev@kalpha.kr)
