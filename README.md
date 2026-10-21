@@ -82,12 +82,12 @@ Git
 ## Activity
 
 <p align="center">
-  <img src="https://streak-stats.demolab.com?user=gguatit&theme=radical" width="48%" alt="GitHub streak stats" />
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=gguatit&theme=radical" width="48%" alt="Top languages by repository" />
+  <img src="https://streak-stats.demolab.com?user=gguatit&theme=tokyonight&hide_border=true" width="48%" alt="GitHub streak stats" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=gguatit&layout=compact&theme=tokyonight&hide_border=true" width="48%" alt="Top languages" />
 </p>
 
 <p align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=gguatit&theme=radical" width="96%" alt="GitHub profile details" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=gguatit&theme=tokyonight" width="96%" alt="GitHub profile details" />
 </p>
 
 ---
