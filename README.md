@@ -2,19 +2,19 @@
 
 **kalpha** · Web & API Security / Backend
 
-Web/API security and backend engineer. I design OpenAPI-based APIs, analyze attack scenarios, and validate them with reproducible PoCs.
+웹/API 보안과 백엔드 엔지니어입니다. OpenAPI 기반 API를 설계하고 공격 시나리오를 분석하며, 재현 가능한 PoC로 검증합니다.
 
 <p align="center">
-  <img src="https://img.shields.io/github/followers/gguatit?style=social" alt="GitHub followers" />
-  <img src="https://hits.sh/github.com/gguatit.svg?label=Profile%20visitors&color=0e75b6" alt="Profile visitors" />
-  <a href="https://hub.xerj.org/contributors/gguatit"><img src="https://hub.xerj.org/contributors/gguatit/badge.svg" alt="XERJ Corpus Hub contributor" /></a>
+  <img src="https://img.shields.io/github/followers/gguatit?style=social" alt="GitHub 팔로워" />
+  <img src="https://hits.sh/github.com/gguatit.svg?label=Profile%20visitors&color=0e75b6" alt="프로필 방문자" />
+  <a href="https://hub.xerj.org/contributors/gguatit"><img src="https://hub.xerj.org/contributors/gguatit/badge.svg" alt="XERJ Corpus Hub 기여자" /></a>
 </p>
 
 ---
 
 ## Profile
 
-Web Security / API Security / Backend Development 중심으로 활동  
+웹 보안 / API 보안 / 백엔드 개발 중심으로 활동  
 OpenAPI 기반 API 설계 및 공격 시나리오 분석  
 재현 가능한 PoC 기반 검증을 기준으로 보안 테스트 수행
 
@@ -22,9 +22,9 @@ OpenAPI 기반 API 설계 및 공격 시나리오 분석
 
 ## Core Focus
 
-- Web Application Security (XSS, Injection, Auth Bypass)
-- API Security (Schema Validation, Request Manipulation)
-- Backend Architecture (OpenAPI, RESTful Design)
+- 웹 애플리케이션 보안 (XSS, Injection, 인증 우회)
+- API 보안 (스키마 검증, 요청 변조)
+- 백엔드 아키텍처 (OpenAPI, RESTful 설계)
 
 ---
 
@@ -118,32 +118,32 @@ Git
 **Stack**: JavaScript · Cloudflare Workers · Durable Objects · D1
 
 **Overview**
-- Real-time anonymous chat service
-- Minimal user identification architecture
+- 실시간 익명 채팅 서비스
+- 최소 사용자 식별 아키텍처
 
 **Security**
-- Input validation / output encoding
-- XSS and injection defense design
-- Client-rendering attack vector validation
+- 입력 검증 / 출력 인코딩
+- XSS·인젝션 방어 설계
+- 클라이언트 렌더링 공격 벡터 검증
 
-**Threat Model**
+**위협 모델**
 
 <table>
-<tr><td width="20%"><b>Attacker</b></td><td>Unauthenticated External User</td></tr>
-<tr><td><b>Objective</b></td><td>Authentication Bypass / Data Access</td></tr>
-<tr><td><b>Vectors</b></td><td>XSS / Injection / Request Manipulation</td></tr>
+<tr><td width="20%"><b>공격자</b></td><td>인증되지 않은 외부 사용자</td></tr>
+<tr><td><b>목표</b></td><td>인증 우회 / 데이터 접근</td></tr>
+<tr><td><b>벡터</b></td><td>XSS / 인젝션 / 요청 변조</td></tr>
 </table>
 
 **XERJ Corpus Hub**
-- Selected commit: [`e57e898a51`](https://github.com/gguatit/Anonymous_Chat/commit/e57e898a51) — 공지사항을 D1에 영구 저장, Durable Object 저장 한도로 인한 공지 유실 수정
-- [Contributor profile](https://hub.xerj.org/contributors/gguatit) · AGPL-3.0 corpus, currently in licence review (not yet installable)
+- XERJ 선택 커밋: [`e57e898a51`](https://github.com/gguatit/Anonymous_Chat/commit/e57e898a51) — 공지사항을 D1에 영구 저장, Durable Object 저장 한도로 인한 공지 유실 수정
+- [기여자 프로필](https://hub.xerj.org/contributors/gguatit) · AGPL-3.0 코퍼스, 라이선스 검토 중 (아직 설치 불가)
 
 ---
 
 ### XMem
 [Xeon-Security/XMem](https://github.com/Xeon-Security/XMem)
 
-**Stack**: Rust · egui · Windows user-mode
+**Stack**: Rust · egui · Windows 사용자 모드
 
 **Overview**
 - Windows 프로세스 메모리 공격·포렌식 연구 플랫폼
@@ -165,7 +165,7 @@ Git
 - API 업로드/다운로드, 24시간 후 자동 삭제
 
 **Security**
-- API key / admin 인증 (12h JWT, PBKDF2-SHA256, HMAC-signed httpOnly cookie)
+- API 키 / 관리자 인증 (12h JWT, PBKDF2-SHA256, HMAC-signed httpOnly cookie)
 - IP rate limit (60/min), 업로드 크기 제한 (50MB / chunked 250MB)
 - UUID v4 파일 ID, attachment + nosniff, CORS allowlist, 만료 검사
 
