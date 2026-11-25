@@ -34,6 +34,7 @@ OpenAPI 기반 API 설계 및 공격 시나리오 분석
 <tr>
 <td width="20%"><b>Backend</b></td>
 <td>
+Rust<br/>
 Node.js (Express)<br/>
 TypeScript<br/>
 OpenAPI 3.x (Swagger)<br/>
@@ -170,18 +171,19 @@ Git
 
 ---
 
-### OCS (OpenCode Sessions)
-[gguatit/OCS-OpenCode-Sessions-](https://github.com/gguatit/OCS-OpenCode-Sessions-)
+### Cue
+[gguatit/cue](https://github.com/gguatit/cue)
 
-**Stack**: Tauri 2 · Rust · rusqlite · Vanilla JS
+**Stack**: Tauri 2 · Rust · React 19 · Windows
 
 **Overview**
-- opencode 세션 SQLite DB를 읽기 전용으로 탐색하는 데스크톱 앱
-- 대화 뷰, todos, diffs, command palette, bookmarks, en/ko/zh/ja i18n
+- 포인터 아래 문제를 캡처해 AI에 묻고 답을 눈에 덜 띄게 보여 주는 Windows 시험 도우미
+- 단축키 + 마우스 클릭 한 번으로 캡처·요청, 답은 오버레이·트레이·키보드 LED·화면 밝기로 표시
 
 **Security**
-- rusqlite query-only 모드로 DB에 read-only 접근
-- `~/.local/share/opencode/opencode.db`만 조회
+- 서버·계정·텔레메트리 없이 로컬에서 동작, API 키는 Windows 자격증명 관리자에만 저장
+- 공급자 엔드포인트 고정, 커스텀 URL은 HTTPS/루프백 HTTP만 허용하고 리다이렉트 미추적
+- 화면 캡처 보호 적용에 실패하면 답을 숨기는 fail-closed, 서명된 업데이트만 사용
 
 ---
 
